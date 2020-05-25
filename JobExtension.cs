@@ -504,6 +504,14 @@ namespace BOMReportJob
             AddReportParam("Vault_UserName", conn.UserName, reportParams);
             AddReportParam("Vault_VaultName", conn.Vault, reportParams);
 
+            //get thumbnail
+            VDF.Vault.Currency.Entities.IEntity itemRev = new Autodesk.DataManagement.Client.Framework.Vault.Currency.Entities.ItemRevision(conn, rootItem);
+            VDF.Vault.Currency.Properties.ThumbnailInfo thmbnailinfo = (VDF.Vault.Currency.Properties.ThumbnailInfo)conn.PropertyManager.GetPropertyValue(itemRev, conn.PropertyManager.GetPropertyDefinitionBySystemName("Thumbnail"), null);
+            byte[] thumbnailBytes = thmbnailinfo.Image;
+            
+            //add to report params
+            AddReportParam("Item_Thumbnail", Convert.ToBase64String(thumbnailBytes), reportParams);
+			
             return rootItem;
         }
 
