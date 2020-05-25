@@ -1879,6 +1879,10 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>BOMView_IsTipRevision</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Item_Thumbnail">
+      <DataType>String</DataType>
+      <Prompt>Item_Thumbnail</Prompt>
+    </ReportParameter>	
   </ReportParameters>
   <CustomProperties>
     <CustomProperty>
