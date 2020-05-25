@@ -1645,7 +1645,7 @@
             </Textbox>
             <Image Name="Report_Item_Thumbnail">
               <Source>Database</Source>
-              <Value>=Parameters!Item_Thumbnail.Value</Value>
+              <Value>=Parameters!ItemBOM_Thumbnail.Value</Value>
               <MIMEType>image/png</MIMEType>
               <Sizing>FitProportional</Sizing>
               <Top>0.39736in</Top>
@@ -1879,7 +1879,7 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>BOMView_IsTipRevision</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Item_Thumbnail">
+    <ReportParameter Name="ItemBOM_Thumbnail">
       <DataType>String</DataType>
       <Prompt>Item_Thumbnail</Prompt>
     </ReportParameter>	
